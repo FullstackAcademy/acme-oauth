@@ -55,6 +55,12 @@
             return (
               <div>
                 <button onClick={ logout }>Logout ({ auth.username})</button>
+                <img src={auth.profile.avatar_url} />
+                <pre>
+                  {
+                    JSON.stringify(auth.profile, null, 2)
+                  }
+                </pre>
               </div>
             );
           }
